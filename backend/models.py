@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from typing import List
 # class Product(BaseModel):
 #     id:int
 #     name:str
@@ -9,3 +9,6 @@ from pydantic import BaseModel
 
 class Fruit(BaseModel):
     name:str
+
+class Fruits(BaseModel):
+    fruits:List[Fruit]
