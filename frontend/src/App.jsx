@@ -1,18 +1,28 @@
 import React from 'react';
 import './App.css';
-import FruitList from './components/Fruits';
+import Home from "../src/pages/Home";
+import AddFruitsPage from "./pages/AddFruitPage";
+import FruitListPage from "./pages/FruitListPage";
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
+// import FruitList from './components/Fruits';
+// import Game from "../src/components/Game"
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Fruit Management App</h1>
-      </header>
-      <main>
-        <FruitList />
-      </main>
-    </div>
+    // <div style={{ textAlign: "center" }}>
+    //   <h2 style={{ color: "white" }}>Jetpack Joyride Prototype</h2>
+    //   <Game />
+    //   <FruitList/> 
+    // </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/add_fruit" element={<AddFruitsPage/>} />
+        <Route path="/fruits" element={<FruitListPage/>} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;

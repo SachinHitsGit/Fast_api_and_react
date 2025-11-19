@@ -13,7 +13,6 @@ const AddFruitForm = ({addFruit}) => {
     };
 
     return(
-        <div>
         <form onSubmit={handleSubmit}>
             <input 
             type='text' 
@@ -23,10 +22,6 @@ const AddFruitForm = ({addFruit}) => {
             />
             <button type="submit">Add Fruit</button>
         </form>
-
-
-
-        </div>
     );
 };
 
